@@ -1,9 +1,11 @@
-import numpy as np
+#import numpy as np
 import cv2 as cv
-import schedule
+#import schedule
 import time
+# windows requires 'pip install opencv-contrib-python'
+# https://stackoverflow.com/questions/43184887/dll-load-failed-error-when-importing-cv2
 
-cap = cv.VideoCapture(0)
+cap = cv.VideoCapture(0, cv.CAP_DSHOW) # added for windows 'cv.CAP_DSHOW'
 # Set properties
 # https://stackoverflow.com/questions/57660458/cant-set-frame-width-and-height-with-opencv-cv2-videocapture-set
 width = cap.get(cv.CAP_PROP_FRAME_WIDTH)
